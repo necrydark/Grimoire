@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📓 Grimoire
 
-## Getting Started
+Grimoire is your go to 7DS Origin companion. Track your progress and plan your grind with our database and calculators.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔥 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Character Database ** - Full character database showcasing stats, materials needed and more.
+- Upcoming & Current Events - View upcoming & current events to see what needs to be done.
+- To-Do system - Add materials & achievements you need to get.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- **Frontend Framework:** [Next.js](https://nextjs.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Deployment:** [Vercel](https://vercel.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
 
-To learn more about Next.js, take a look at the following resources:
+---
+## 🚀 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/yourusername/cinewave.git
+   cd cinewave
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   # Install dependencies
+   npm i (Node)
+   bun install (bun)
+   ```
 
-## Deploy on Vercel
+2. **Start the App**
+   ```bash
+   npm run dev (Node)
+   bun dev (bun)
+   ```
+   
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribute
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   If you want to contribute fork the project and push any changes or features onto new branches and then create a PR describing what the change is or the new feature is.
+
+**🤍 The Team**
