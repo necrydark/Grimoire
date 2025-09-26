@@ -1,4 +1,5 @@
 import AppSidebar from "@/components/app-sidebar";
+import Footer from "@/components/footer";
 import {
   SidebarInset,
   SidebarProvider,
@@ -29,6 +30,7 @@ export default function RootLayout({
           <SidebarInset className="bg-[#202836] p-2 pb-0">
             <SidebarTrigger className="text-white hover:bg-card hover:text-white transition-all duration-300" />
             <main className="pt-6 flex-1 overflow-auto">{children}</main>
+            <Footer />
           </SidebarInset>
         </SidebarProvider>
       </body>

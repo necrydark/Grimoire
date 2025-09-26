@@ -8,22 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // Add your custom font stack
-        custom: [
-          "Platypi",
-          "Noto Sans",
-          "Malgun Gothic",
-          "Apple SD Gothic Neo",
-          "sans-serif",
-        ],
-        // Or override the default sans font
-        sans: [
-          "Platypi",
-          "Noto Sans",
-          "Malgun Gothic",
-          "Apple SD Gothic Neo",
-          "sans-serif",
-        ],
+        custom: ["var(--font-custom)"],
       },
     },
   },
