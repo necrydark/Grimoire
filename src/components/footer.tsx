@@ -6,7 +6,7 @@ import { PiNotionLogo } from "react-icons/pi";
 
 export default function Footer() {
   return (
-    <footer className="p-4 border-t-[1px] border-t-card">
+    <footer className="p-4 border-t-[1px] bg-card/50 backdrop-blur-sm border-t-card">
       <p className="text-gray-400 font-custom">
         Grimoire is not affiliated with Netmarble
       </p>
@@ -75,7 +75,7 @@ export default function Footer() {
             <Link
               href={""}
               target="_blank"
-              className="hover:text-card duration-300 transition-all"
+              className="hover:underline duration-300 transition-all"
             >
               Privacy Policy
             </Link>

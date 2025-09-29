@@ -23,13 +23,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body>
         <SidebarProvider>
           <AppSidebar />
-          <SidebarInset className="bg-[#202836] p-2 pb-0">
-            <SidebarTrigger className="text-white hover:bg-card hover:text-white transition-all duration-300" />
-            <main className="pt-6 flex-1 overflow-auto">{children}</main>
+          <SidebarInset className=" py-2 pb-0">
+            <SidebarTrigger className="text-white hover:bg-card hover:text-white transition-all duration-300 ml-2" />
+            <main className="pt-6 flex-1 overflow-auto flex flex-col">
+              {children}
+            </main>
             <Footer />
           </SidebarInset>
         </SidebarProvider>

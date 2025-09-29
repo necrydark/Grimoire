@@ -37,7 +37,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BsDiscord } from "react-icons/bs";
 import { PiNotionLogo } from "react-icons/pi";
 
@@ -98,7 +98,7 @@ export default function AppSidebar() {
   const { state } = useSidebar();
 
   const isDatabasePage = pathname.startsWith("/database");
-  const [isOpen, setIsOpen] = React.useState(isDatabasePage);
+  const [isOpen, setIsOpen] = useState(isDatabasePage);
 
   const handleDatabaseClick = () => {
     if (state === "collapsed") {
