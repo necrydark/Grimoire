@@ -1,23 +1,6 @@
 "use client";
 
 import {
-  BookOpen,
-  Calculator,
-  Calendar,
-  ChevronDown,
-  Database,
-  Fish,
-  Gem,
-  Home,
-  Shield,
-  Sword,
-  Users,
-} from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import * as React from "react";
-
-import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
@@ -37,6 +20,23 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
+import {
+  BookOpen,
+  Calculator,
+  Calendar,
+  ChevronDown,
+  Database,
+  Fish,
+  Gem,
+  Home,
+  Notebook,
+  Shield,
+  Sword,
+  Users,
+} from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import * as React from "react";
 import { useEffect, useState } from "react";
 import { BsDiscord } from "react-icons/bs";
 import { PiNotionLogo } from "react-icons/pi";
@@ -90,6 +90,11 @@ const navItems: NavItem[] = [
     title: "Roadmap",
     href: "https://www.notion.so/27a4f66304e8805ab3bed28384df89db?v=27a4f66304e880a6bf69000c554825f0&source=copy_link",
     icon: PiNotionLogo,
+  },
+  {
+    title: "GCWiki",
+    href: "https://gcwiki.vercel.app/",
+    icon: Notebook,
   },
 ];
 
