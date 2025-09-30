@@ -102,7 +102,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <Gem className="w-6 h-6 text-primary" />
               <div>
-                <CardTitle className="text-xl grimoire-text">
+                <CardTitle className="text-xl origin-font">
                   {"What's Farmable Today"}
                 </CardTitle>
                 <CardDescription>Optimize your daily farming</CardDescription>
@@ -120,7 +120,7 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-between p-3 bg-secondary/50 rounded-lg">
                 <div className="flex items-center gap-3">
-                  <Sword className="w-4 h-4 text-chart-1" />
+                  <Sword className="w-4 h-4 text-chart-1" /> 
                   <span className="font-medium">Attack Materials</span>
                 </div>
                 <span className="text-sm text-muted-foreground">Tuesday</span>
@@ -144,7 +144,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <Users className="w-6 h-6 text-accent" />
               <div>
-                <CardTitle className="text-xl grimoire-text">
+                <CardTitle className="text-xl origin-font">
                   Database Quick Access
                 </CardTitle>
                 <CardDescription>Explore characters and items</CardDescription>
@@ -175,7 +175,7 @@ export default function Home() {
               </Button>
               <Button
                 asChild
-                variant="outline"
+                variant='outline'
                 className="h-16 flex-col gap-2 bg-transparent"
               >
                 <Link href="/database/materials">
