@@ -7,12 +7,12 @@ import { characters } from "@/data/characters";
 import Image from "next/image";
 
 export default function CharacterPage({
-  params: { name },
+  params: { id },
 }: {
-  params: { name: string };
+  params: { id: string };
 }) {
-  console.log(name);
-  const character = characters.find((x) => x.name === name);
+  console.log(id);
+  const character = characters.find((x) => x.id === id);
 
   console.log(character);
 

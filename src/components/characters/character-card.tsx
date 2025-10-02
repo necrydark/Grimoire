@@ -4,11 +4,13 @@ import Link from "next/link";
 type CharacterCardProps = {
   imageUrl: string;
   name: string;
+  id: string;
   isNew: boolean;
 };
 
 export default function CharacterCard({
   imageUrl,
+  id,
   name,
   isNew,
 }: CharacterCardProps) {
@@ -18,7 +20,7 @@ export default function CharacterCard({
 
   return (
     <Link
-      href={`/database/characters/${encodeURIComponent(name)}`}
+      href={`/database/characters/${encodeURIComponent(id)}`}
       className="m-2 cell relative cursor-pointer transition duration-100 hover:opacity-100 hover:shadow-xl rounded-xl bg-card w-fit"
     >
       <div className="relative">

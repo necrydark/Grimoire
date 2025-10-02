@@ -3,17 +3,17 @@ import { weapons } from "./weapons";
 // Basic Info
 export const characters = [
   {
-    id: 1,
+    id: "tristan",
     name: "Tristan",
     subtitle: "If it's something I can do, I'll always give it a try!",
     description:
       "A boy chosen by the 『Book of Stars』. He calms the chaos stirred by the relic and sets out on a journey to save Britannia from turmoil.",
     imageUrl: "/characters/tristan.png",
     weapons: [weapons.dualSword, weapons.longSword, weapons.greatSword],
-    new: false,
+    isNew: false,
   },
   {
-    id: 2,
+    id: "tioreh",
     name: "Tioreh",
     subtitle: "I have a feeling something really fun is around the corner.",
     description:
@@ -23,7 +23,7 @@ export const characters = [
     isNew: true,
   },
   {
-    id: 3,
+    id: "clotho",
     name: "Clotho",
     subtitle: "This, too, must be a preordained fate.",
     description:

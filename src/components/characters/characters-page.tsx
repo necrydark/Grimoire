@@ -132,6 +132,7 @@ export default function CharactersTable() {
       <div className="px-4 md:pl-6 md:pr-4 flex flex-wrap max-w-screen-xl mt-2">
         {filteredCharacter.map((char) => (
           <CharacterCard
+            id={char.id}
             key={char.id}
             name={char.name}
             imageUrl={char.imageUrl}
