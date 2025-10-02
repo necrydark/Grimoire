@@ -6,11 +6,12 @@ import {
 import { characters } from "@/data/characters";
 import Image from "next/image";
 
-export default function CharacterPage({
-  params: { id },
+export default async function CharacterPage({
+  params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
   console.log(id);
   const character = characters.find((x) => x.id === id);
 
