@@ -16,7 +16,14 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Home | Grimoire",
+  description:
+    "The comprehensive database for The Seven Deadly Sins: Origins. We are not affiliated with Netmarble.",
+};
 
 export default function Home() {
   return (
@@ -120,7 +127,7 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-between p-3 bg-secondary/50 rounded-lg">
                 <div className="flex items-center gap-3">
-                  <Sword className="w-4 h-4 text-chart-1" /> 
+                  <Sword className="w-4 h-4 text-chart-1" />
                   <span className="font-medium">Attack Materials</span>
                 </div>
                 <span className="text-sm text-muted-foreground">Tuesday</span>
@@ -175,7 +182,7 @@ export default function Home() {
               </Button>
               <Button
                 asChild
-                variant='outline'
+                variant="outline"
                 className="h-16 flex-col gap-2 bg-transparent"
               >
                 <Link href="/database/materials">

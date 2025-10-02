@@ -1,12 +1,25 @@
-import { Character } from "@/types/character";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function CharacterCard({ imageUrl, name, isNew }: Character) {
+type CharacterCardProps = {
+  imageUrl: string;
+  name: string;
+  isNew: boolean;
+};
+
+export default function CharacterCard({
+  imageUrl,
+  name,
+  isNew,
+}: CharacterCardProps) {
+  if (!name) {
+    return null;
+  }
+
   return (
     <Link
-      href={"/characters"}
-      className="m-2 cell relative cursor-pointer transition duration-100 hover:opacity-100 hover:shadow-xl rounded-xl  bg-card w-fit"
+      href={`/database/characters/${encodeURIComponent(name)}`}
+      className="m-2 cell relative cursor-pointer transition duration-100 hover:opacity-100 hover:shadow-xl rounded-xl bg-card w-fit"
     >
       <div className="relative">
         <div className="w-full rounded-t-xl bg-opacity-50 overflow-hidden bg-red-600">

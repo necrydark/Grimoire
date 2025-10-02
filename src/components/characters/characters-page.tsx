@@ -1,4 +1,5 @@
 "use client";
+
 import CharacterCard from "@/components/characters/character-card";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,30 +15,32 @@ import {
 } from "@/components/ui/select";
 import { characters } from "@/data/characters";
 import { Search, Sparkles, X } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
-export default function CharactersPage() {
+export default function CharactersTable() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedWeapon, setSelectedWeapon] = useState<string>("all");
   const [showNewOnly, setShowNewOnly] = useState(false);
 
-  const weaponsList = useMemo(() => {
-    const allWeapons = characters.flatMap((c) => c.weapons.map((w) => w.name));
-    return Array.from(new Set(allWeapons)).sort();
-  }, []);
+  // build weapons list once (no useMemo needed, static data)
+  const weaponsList = Array.from(
+    new Set(characters.flatMap((c) => c.weapons.map((w) => w.name)))
+  ).sort();
 
-  const filteredCharacter = useMemo(() => {
-    return characters.filter((char) => {
-      const matchesSearch =
-        searchQuery === "" ||
-        char.name.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesWeapon =
-        selectedWeapon === "all" ||
-        char.weapons.some((w) => w.name === selectedWeapon);
-      const matchesNew = !showNewOnly || char.new;
-      return matchesSearch && matchesWeapon && matchesNew;
-    });
-  }, [searchQuery, selectedWeapon, showNewOnly]);
+  // filtering logic
+  const filteredCharacter = characters.filter((char) => {
+    const matchesSearch =
+      searchQuery === "" ||
+      char.name.toLowerCase().includes(searchQuery.toLowerCase());
+
+    const matchesWeapon =
+      selectedWeapon === "all" ||
+      char.weapons.some((w) => w.name === selectedWeapon);
+
+    const matchesNew = !showNewOnly || char.isNew;
+
+    return matchesSearch && matchesWeapon && matchesNew;
+  });
 
   const clearFilters = () => {
     setSearchQuery("");
@@ -49,17 +52,7 @@ export default function CharactersPage() {
     searchQuery !== "" || selectedWeapon !== "all" || showNewOnly;
 
   return (
-    <div className=" container mx-auto px-4 py-2 space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold grimoire-text origin-font mb-2">
-          Characters Database
-        </h1>
-        <p className="text-muted-foreground">
-          {
-            "Explore all characters in Seven Deadly Sins Origins with detailed stats and abilities."
-          }
-        </p>
-      </div>
+    <>
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -78,6 +71,7 @@ export default function CharactersPage() {
               />
             </div>
             <div className="flex flex-wrap gap-2 items-center">
+              {/* Weapon filter */}
               <Select value={selectedWeapon} onValueChange={setSelectedWeapon}>
                 <SelectTrigger className="w-[140px]">
                   <SelectValue placeholder="All Weapons" />
@@ -92,6 +86,7 @@ export default function CharactersPage() {
                 </SelectContent>
               </Select>
 
+              {/* New only filter */}
               <div className="flex items-center gap-2 px-3 py-2 border rounded-md bg-background">
                 <Checkbox
                   id="new-characters"
@@ -100,40 +95,50 @@ export default function CharactersPage() {
                     setShowNewOnly(checked === true)
                   }
                 />
-                     <Label
-                    htmlFor="new-characters"
-                    className="text-sm font-medium cursor-pointer flex items-center gap-1"
-                  >
-                    <Sparkles className="w-4 h-4 text-yellow-500" />
-                    New Only
-                  </Label>
+                <Label
+                  htmlFor="new-characters"
+                  className="text-sm font-medium cursor-pointer flex items-center gap-1"
+                >
+                  <Sparkles className="w-4 h-4 text-yellow-500" />
+                  New Only
+                </Label>
               </div>
 
+              {/* Clear filters */}
               {hasActiveFilters && (
-                <Button variant={"ghost"} size={"sm"} onClick={clearFilters} className="gap-1">
-                    <X className="w-4 h-4" />
-                    Clear
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={clearFilters}
+                  className="gap-1"
+                >
+                  <X className="w-4 h-4" />
+                  Clear
                 </Button>
               )}
             </div>
           </div>
         </CardContent>
       </Card>
-      <div className="flex items-center justify-between">
+
+      {/* Results count */}
+      <div className="flex items-center justify-between mt-2">
         <p className="text-muted-foreground text-sm">
           Showing {filteredCharacter.length} of {characters.length} characters
         </p>
       </div>
+
+      {/* Character grid */}
       <div className="px-4 md:pl-6 md:pr-4 flex flex-wrap max-w-screen-xl mt-2">
         {filteredCharacter.map((char) => (
           <CharacterCard
             key={char.id}
             name={char.name}
             imageUrl={char.imageUrl}
-            isNew={char.new}
+            isNew={char.isNew ?? false}
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }

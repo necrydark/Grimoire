@@ -20,7 +20,7 @@ export const characters = [
       "A girl who left the Fairy King's Forest and came to Liones, driven by a desire for adventure. Together with Tristan, she discovers the 『Book of Stars』 and set...",
     imageUrl: "/characters/tioreh.png",
     weapons: [weapons.book, weapons.staff, weapons.wand],
-    new: true,
+    isNew: true,
   },
   {
     id: 3,
@@ -30,6 +30,6 @@ export const characters = [
       "A mysterious woman who appeared out of the blue to guide Tristan and his companions to the origin",
     imageUrl: "/characters/clotho.png",
     weapons: [weapons.rapier, weapons.staff, weapons.book],
-    new: false,
+    isNew: false,
   },
 ];
