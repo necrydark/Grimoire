@@ -6,6 +6,7 @@ type CharacterCardProps = {
   name: string;
   id: string;
   isNew: boolean;
+  rarity: number;
 };
 
 export default function CharacterCard({
@@ -13,6 +14,7 @@ export default function CharacterCard({
   id,
   name,
   isNew,
+  rarity,
 }: CharacterCardProps) {
   if (!name) {
     return null;
@@ -24,7 +26,15 @@ export default function CharacterCard({
       className="m-2 cell relative cursor-pointer transition duration-100 hover:opacity-100 hover:shadow-xl rounded-xl bg-card w-fit"
     >
       <div className="relative">
-        <div className="w-full rounded-t-xl bg-opacity-50 overflow-hidden bg-red-600">
+        <div
+          className={`w-full rounded-t-xl bg-opacity-50 overflow-hidden ${
+            rarity === 5
+              ? "bg-[#f9a536]"
+              : rarity === 4
+              ? "bg-[#8565db]"
+              : "bg-green-600"
+          }`}
+        >
           <Image
             src={imageUrl}
             alt={name}

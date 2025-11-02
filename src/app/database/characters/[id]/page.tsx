@@ -4,6 +4,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { characters } from "@/data/characters";
+import { Star } from "lucide-react";
 import Image from "next/image";
 
 export default async function CharacterPage({
@@ -34,7 +35,23 @@ export default async function CharacterPage({
           height={100}
         />
         <div className="flex flex-col gap-2 h-[100px]">
-          <h1 className="text-2xl font-bold">{character.name}</h1>
+          <div className="flex items-center gap-2">
+            <h1 className="text-2xl font-bold">{character.name}</h1>
+            <div className="flex items-center gap-1">
+              {[...Array(character.rarity)].map((_, i) => (
+                <Star
+                  key={i}
+                  className={
+                    character.rarity === 5
+                      ? "text-[#f9a536] fill-[#f9a536] w-6 h-6"
+                      : character.rarity === 4
+                      ? "text-[#8565db] fill-[#8565db] w-6 h-6"
+                      : "text-green-600 fill-green-600 w-6 h-6"
+                  }
+                />
+              ))}
+            </div>
+          </div>
           <p className="text-sm">{character.subtitle}</p>
           <p className="text-sm">{character.description}</p>
           <div className="flex flex-row gap-2">

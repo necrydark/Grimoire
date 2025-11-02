@@ -27,5 +27,24 @@ export const weapons = {
     name: "Rapier",
     imageUrl: "/weapons/rapier.png",
   },
-
+  axe: {
+    name: "Axe",
+    imageUrl: "/weapons/rapier.png",
+  },
+  nunchaku: {
+    name: "Nunchaku",
+    imageUrl: "/weapons/rapier.png",
+  },
+  gauntlets: {
+    name: "Gauntlets",
+    imageUrl: "/weapons/rapier.png",
+  },
+  lance: {
+    name: "Lance",
+    imageUrl: "/weapons/rapier.png",
+  },
+  swordShield: {
+    name: "Sword & Shield",
+    imageUrl: "/weapons/rapier.png",
+  },
 };

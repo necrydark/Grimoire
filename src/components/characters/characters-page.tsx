@@ -77,9 +77,18 @@ export default function CharactersTable() {
                   <SelectValue placeholder="All Weapons" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All Weapons</SelectItem>
+                  <SelectItem
+                    value="all"
+                    className="focus:bg-blue-950 duration-300 transition-all cursor-pointer"
+                  >
+                    All Weapons
+                  </SelectItem>
                   {weaponsList.map((weapon) => (
-                    <SelectItem key={weapon} value={weapon}>
+                    <SelectItem
+                      key={weapon}
+                      value={weapon}
+                      className="focus:bg-blue-950 duration-300 transition-all cursor-pointer"
+                    >
                       {weapon}
                     </SelectItem>
                   ))}
@@ -110,7 +119,7 @@ export default function CharactersTable() {
                   variant="ghost"
                   size="sm"
                   onClick={clearFilters}
-                  className="gap-1"
+                  className="gap-1 hover:bg-blue-950 duration-300 transition-all cursor-pointer"
                 >
                   <X className="w-4 h-4" />
                   Clear
@@ -137,6 +146,7 @@ export default function CharactersTable() {
             name={char.name}
             imageUrl={char.imageUrl}
             isNew={char.isNew ?? false}
+            rarity={char.rarity}
           />
         ))}
       </div>

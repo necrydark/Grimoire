@@ -55,6 +55,18 @@ const navItems: NavItem[] = [
     icon: Home,
   },
   {
+    title: "Database",
+    href: "/database",
+    icon: Database,
+    children: [
+      { title: "Characters", href: "/database/characters", icon: Users },
+      { title: "Items", href: "/database/items", icon: Sword },
+      { title: "Materials", href: "/database/materials", icon: Shield },
+      { title: "Fishing", href: "/database/fishing", icon: Fish },
+      { title: "Equipment", href: "/database/equipment", icon: Gem },
+    ],
+  },
+  {
     title: "Calculator",
     href: "/calculator",
     icon: Calculator,
@@ -69,18 +81,7 @@ const navItems: NavItem[] = [
     href: "/farmable",
     icon: Gem,
   },
-  {
-    title: "Database",
-    href: "/database",
-    icon: Database,
-    children: [
-      { title: "Characters", href: "/database/characters", icon: Users },
-      { title: "Items", href: "/database/items", icon: Sword },
-      { title: "Materials", href: "/database/materials", icon: Shield },
-      { title: "Fishing", href: "/database/fishing", icon: Fish },
-      { title: "Equipment", href: "/database/equipment", icon: Gem },
-    ],
-  },
+
   {
     title: "Discord",
     href: "https://discord.gg/m9JP8x7EF4",
