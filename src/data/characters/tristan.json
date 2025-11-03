@@ -1,4 +1,22 @@
 {
-  "id": "1",
-  "name": "Tristan"
+  "id": "tristan",
+  "description": "A boy chosen by the 『Book of Stars』. He calms the chaos stirred by the relic and sets out on a journey to save Britannia from turmoil.",
+  "weapons": [
+    {
+      "id": "dualSword",
+      "name": "Dual Swords",
+      "imageUrl": "/weapons/dualsword.png"
+    },
+    {
+      "id": "longSword",
+      "name": "Long Sword",
+      "imageUrl": "/weapons/longsword.png"
+    },
+    {
+      "id": "greatSword",
+      "name": "Great Sword",
+      "imageUrl": "/weapons/greatsword.png"
+    }
+  ]
+
 }

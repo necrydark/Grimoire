@@ -9,9 +9,10 @@ export const characters = [
     description:
       "A boy chosen by the 『Book of Stars』. He calms the chaos stirred by the relic and sets out on a journey to save Britannia from turmoil.",
     imageUrl: "/characters/tristan.png",
-    rarity: 5,
+    rarity: 4,
     weapons: [weapons.dualSword, weapons.longSword, weapons.greatSword],
     isNew: false,
+    element: "fire",
   },
   {
     id: "tioreh",
@@ -20,7 +21,7 @@ export const characters = [
     description:
       "A girl who left the Fairy King's Forest and came to Liones, driven by a desire for adventure. Together with Tristan, she discovers the 『Book of Stars』 and set...",
     imageUrl: "/characters/tioreh.png",
-    rarity: 5,
+    rarity: 4,
     weapons: [weapons.book, weapons.staff, weapons.wand],
     isNew: false,
   },
@@ -142,7 +143,7 @@ export const characters = [
       "A mysterious woman who appeared out of the blue to guide Tristan and his companions to the origin",
     imageUrl: "/characters/clotho.png",
     weapons: [weapons.lance, weapons.gauntlets, weapons.nunchaku],
-    rarity: 5,
+    rarity: 4,
     isNew: true,
   },
   {
@@ -153,7 +154,7 @@ export const characters = [
       "A mysterious woman who appeared out of the blue to guide Tristan and his companions to the origin",
     imageUrl: "/characters/clotho.png",
     weapons: [weapons.swordShield, weapons.nunchaku, weapons.gauntlets],
-    rarity: 5,
+    rarity: 4,
     isNew: true,
   },
   {
@@ -164,7 +165,7 @@ export const characters = [
       "A mysterious woman who appeared out of the blue to guide Tristan and his companions to the origin",
     imageUrl: "/characters/clotho.png",
     weapons: [weapons.rapier, weapons.staff, weapons.book],
-    rarity: 5,
+    rarity: 4,
     isNew: true,
   },
   {
@@ -175,7 +176,7 @@ export const characters = [
       "A mysterious woman who appeared out of the blue to guide Tristan and his companions to the origin",
     imageUrl: "/characters/clotho.png",
     weapons: [weapons.rapier, weapons.staff, weapons.book],
-    rarity: 5,
+    rarity: 4,
     isNew: true,
   },
   {
@@ -241,7 +242,7 @@ export const characters = [
       "A mysterious woman who appeared out of the blue to guide Tristan and his companions to the origin",
     imageUrl: "/characters/clotho.png",
     weapons: [weapons.rapier, weapons.staff, weapons.book],
-    rarity: 5,
+    rarity: 4,
     isNew: true,
   },
   {
@@ -252,7 +253,7 @@ export const characters = [
       "A mysterious woman who appeared out of the blue to guide Tristan and his companions to the origin",
     imageUrl: "/characters/clotho.png",
     weapons: [weapons.rapier, weapons.staff, weapons.book],
-    rarity: 5,
+    rarity: 4,
     isNew: true,
   },
   {
@@ -263,7 +264,7 @@ export const characters = [
       "A mysterious woman who appeared out of the blue to guide Tristan and his companions to the origin",
     imageUrl: "/characters/clotho.png",
     weapons: [weapons.rapier, weapons.staff, weapons.book],
-    rarity: 5,
+    rarity: 4,
     isNew: true,
   },
 ];
